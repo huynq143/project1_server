@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 28, 2018 at 06:30 AM
+-- Generation Time: Mar 28, 2018 at 06:59 AM
 -- Server version: 10.1.31-MariaDB
 -- PHP Version: 7.2.3
 
@@ -83,15 +83,15 @@ CREATE TABLE `douong` (
 
 INSERT INTO `douong` (`MaDU`, `TenDU`, `GioiThieu`, `Dongia`, `Anh`, `MaDM`) VALUES
 (2, 'Thạch Kem Chanh Dây', 'Những ly thạch trái cây nhiều màu luôn hấp dẫn thực khách mọi lứa tuổi, hãy tự tay làm những ly thạch kem thơm ngon đẹp mắt để xua tan cái oi bức lúc thời tiết chuyển mùa nhé.        ', 15000, '/image/IMG_Douong/Douong2.jpg', 1),
-(3, 'Thạch Trái Cam Mát Lạnh ', '    ', 15000, 'image/IMG_Douong/Thach_TraiCamMatLanh.jpg', 2),
+(3, 'Thạch Trái Cam Mát Lạnh ', '    gt nè', 15000, 'image/IMG_Douong/Thach_TraiCamMatLanh.jpg', 2),
 (4, 'Thạch Sữa Ướp Lạnh ', 'Thạch sữa ướp lạnh là món tráng miệng tuyệt vời cho cả nhà. Vị mát, ngọt và mùi thơm hấp dẫn của hoa trái mùa hè hòa quện trong món thạch sữa này.  ', 15000, 'image/IMG_Douong/Thach_SuaUopLanh.jpg', 2),
 (5, 'Thạch Sữa Đậu Nành ', 'Chỉ cần bằng cách làm đơn giản, món sữa đậu đã trở thành những cốc thạch hoa quả thơm mát và bổ dưỡng rồi.  ', 15000, 'image/IMG_Douong/Thach_SuaDauNanh.jpg', 2),
 (7, 'Cocktail Cam 3 Tầng', 'Lạ và hấp dẫn, món uống này sẽ mang lại cho bạn một buổi tối thật thú vị!  ', 35000, 'image/IMG_Douong/CockTail_Cam3Tang.jpg', 3),
 (9, 'Cocktail Chanh Mojito', 'Cocktail chanh Mojito là loại đồ uống không thể bỏ qua khi nhắc đến đất nước Cu Ba xinh đẹp. Sinh thời, đại văn hào Ernest Hemingway đã rất “mê mẩn” thức uống tuyệt vời này. Có rất nhiều cách để pha chế Mojito như dùng vang trắng, Vodka lúa mới, Rum chauvet… nhưng có lẽ đúng nhất thì vẫn phải là light Rum.  ', 35000, 'image/IMG_Douong/CockTail_ChanhMojito.jpg', 3),
 (11, 'Cocktail Tình Yêu ', 'Hương thơm tươi mát ngọt ngào làm tinh thần sảng khoái, lượng vitamin dồi dào và màu đỏ quyến rũ là những lý do làm cho trái dâu trở thành sự lựa chọn đầu tiên trong các loại trái cây làm món thức uống cho bữa tiệc tình yêu.  ', 35000, 'image/IMG_Douong/CockTail_TinhYeu.jpg', 3),
 (22, 'Trà Long Nhãn ', 'Nếu bạn hoặc người thân đang mất ngủ hoặc bị stress thì bát chè long nhãn thơm ngon sẽ là bài thuốc trị bệnh tuyệt vời. Chắc hẳn bạn sẽ nhận được vô số lời khen sau khi chế biến thành công món chè ngon miệng này.', 100000, 'image/IMG_Douong/Che_LuongNhan.jpg', 3),
-(24, 'Chè Đậu Ngự ', 'Món chè đậu ngự vừa có thể giải khát, vừa có tác dụng bồi bổ cơ thể, là một món ăn rất tốt trong mùa hè.   ', NULL, '/image/IMG_Douong/24.jpg', 1),
-(29, 'Kem Dâu Tình Yêu', 'Bạn băn khoăn không biết làm gì cho một nửa của mình trong mùa hè oi bức này. Tại sao không thử tự tay chế biến món kem dâu tình yêu này, chắc chắn người ấy sẽ bất ngờ với ly kem dâu mát lạnh, ngọt ngào như chính tình yêu của bạn. ', NULL, 'image/IMG_Douong/Kem_DauTinhYeu.jpg', 3),
+(24, 'Chè Đậu Ngự ', 'Món chè đậu ngự vừa có thể giải khát, vừa có tác dụng bồi bổ cơ thể, là một món ăn rất tốt trong mùa hè.   ', 69000, '/image/IMG_Douong/24.jpg', 1),
+(29, 'Kem Dâu Tình Yêu', 'Bạn băn khoăn không biết làm gì cho một nửa của mình trong mùa hè oi bức này. Tại sao không thử tự tay chế biến món kem dâu tình yêu này, chắc chắn người ấy sẽ bất ngờ với ly kem dâu mát lạnh, ngọt ngào như chính tình yêu của bạn. ', 60000, 'image/IMG_Douong/Kem_DauTinhYeu.jpg', 3),
 (52, ' Nước Nha Đam Mát Lạnh ', 'Cây nha đam hay người ta vẫn gọi là cây lô hội, hoặc như trong các siêu thị lớn thì lại gọi là long tu, được biết đến như một nguyên liệu đặc biệt để sản xuất mỹ phẩm. Nhưng thật ra loại cây này còn có nhiều công dụng hơn thế.  ', 1234, 'image/IMG_Douong/Douong52.jpg', 3),
 (62, 'Trà Sữa 1', 'giai nhiet', 69000, '/image/IMG_Douong/62.jpg', 1);
 
@@ -154,9 +154,9 @@ INSERT INTO `monan` (`MaMA`, `TenMA`, `GioiThieu`, `Dongia`, `Anh`, `MaDM`) VALU
 (16, 'Bánh Cam', 'Giới thiệu bánh cam', 10000, 'IMG_Monan/16.gif', 2),
 (17, 'Vịt om sấu', 'gt nè', 100000, 'IMG_Monan/17.jpg', 1),
 (19, 'Bánh Chuối Hấp ', 'Giới thiệu bánh chuối hấp', 25000, 'IMG_Monan/19.jpg', 2),
-(21, 'Tôm xào hạnh nhân ', '', 60000, 'IMG_Monan/21.jpg', 1),
+(21, 'Tôm xào hạnh nhân ', 'gt nè', 60000, 'IMG_Monan/21.jpg', 1),
 (25, 'Chả cá chiên xù ', 'gt chả cá chiên xù', 45000, 'IMG_Monan/Monan25.jpg', 3),
-(26, 'Chả cá bọc trứng cút kho ', '', 35000, 'IMG_Monan/Monan26.jpg', 3),
+(26, 'Chả cá bọc trứng cút kho ', 'gt nè', 35000, 'IMG_Monan/Monan26.jpg', 3),
 (28, 'Bánh sữa ', 'Những chiếc bánh này dùng để đãi tiệc ngọt hoặc làm món tráng miệng. Bánh có vị ngọt thanh, hình thức rất bắt mắt.', 20000, 'IMG_Monan/Monan28.jpg', 2);
 
 -- --------------------------------------------------------
