@@ -33,11 +33,11 @@
                                             </tr>
                                             <tr>                                            
                                                 <td>Giới thiệu</td>
-                                                <td><input type="text" name="" style="width: 100%;height: 100%;" /></td>
+                                                <td><textarea style="width: 100%;"></textarea></td>
                                             </tr>
                                             <tr>                                            
                                                 <td>Giá</td>
-                                                <td><input type="text" name="" style="width: 100%;height: 100%;" /></td>
+                                                <td><input type="number" step="1" name="" style="width: 100%;height: 100%;" /></td>
                                             </tr>
                                             <tr>                                            
                                                 <td>Hình</td>
