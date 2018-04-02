@@ -1,4 +1,5 @@
 <?php
+	session_start();
 	include_once('models/M_web.php');
 
 	class C_web
@@ -20,6 +21,29 @@
 
 	    public function trangThemSanPham(){
 	    	require_once('views/V_admin_them_san_pham.php');
+	    }
+
+	    public function trangLogin(){
+	    	require_once('views/V_admin_login.php');
+	    	$M_web = new M_web();
+	    	if(isset($_POST['btnDangNhap'])){
+	    		$username = trim($_POST['username']);
+	    		$password = trim($_POST['password']);
+	    		//echo $username.$password;
+	    		if($username=='' || $password ==''){
+	    			echo 'Chưa nhập username hoặc password';
+	    		}else{
+	    			$thongTinUser = $M_web->dangNhap($username, $password);
+	    			if(count($thongTinUser) > 0){
+	    				//echo 'ok';
+	    				$_SESSION['user'] = $thongTinUser[0];
+	    				var_dump($_SESSION['user']);
+	    				header('Location: http://www.google.com.vn/');
+	    			}else{
+	    				echo 'Sai username hoặc password';
+	    			}
+	    		}
+	    	}    	
 	    }
 
 		//-----------------------------------BẢNG MÓN ĂN---------------------------------

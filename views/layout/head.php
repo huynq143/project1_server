@@ -6,5 +6,6 @@
         <link rel="stylesheet" type="text/css" href="demo/assets/css/material-design.css">
         <link rel="stylesheet" type="text/css" href="demo/assets/css/small-n-flat.css">
         <link rel="stylesheet" type="text/css" href="demo/assets/css/font-awesome.min.css">
-        <title>Clearmin template</title>
+        <link rel="icon" href="public/images/logo.png">
+        <title>Mr.Food</title>
 </head>

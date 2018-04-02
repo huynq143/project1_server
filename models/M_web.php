@@ -8,6 +8,11 @@
 			return $this->loadAllRow();
 		}
 
+		public function dangNhap($username, $password){
+			$this->setQuery('select * from user where username = ? and password = ?');
+			return $this->loadAllRow(array($username, $password));
+		}
+
 		public function xemMonAnTheoMa($maMon){
 			$this->setQuery('select * from monan where `MaMA` = ?');
 			return $this->loadRow(array($maMon));

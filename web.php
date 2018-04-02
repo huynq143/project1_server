@@ -18,6 +18,11 @@
 				$C_web = new C_web();
 				$C_web->trangThemSanPham();
 				break;
+			case 'login':
+				//echo "món ăn nè hihi";
+				$C_web = new C_web();
+				$C_web->trangLogin();
+				break;
 			//----------------------MÓN ĂN-------------------------
 			case 'danh-sach-mon-an':
 				//echo "món ăn nè hihi";
