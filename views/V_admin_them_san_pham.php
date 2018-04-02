@@ -62,7 +62,7 @@
                                             </tr>
                                             <tr>                                            
                                                 
-                                                <td colspan="2"><input type="submit" name="" value="Thêm" style="width: 100%;height: 100%;" /></td>
+                                                <td colspan="2"><input type="submit" name="btnThem" value="Thêm" style="width: 100%;height: 100%;" /></td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -72,7 +72,22 @@
                     </div>
                     
                 </div>
-                <?php var_dump($_FILES); ?>
+                <?php
+                //var_dump($_FILES); 
+                if(isset($_POST['btnThem'])){
+                    if(isset($_FILES['hinhSP'])){
+                        if($_FILES['hinhSP']['error'] > 0){
+                            echo 'File upload lỗi';
+                        }else{
+                            move_uploaded_file($_FILES['hinhSP']['tmp_name'], './public/images/'.$_FILES['hinhSP']['name']);
+                            echo 'ok';
+                        }
+                    }else{
+                        echo 'chưa chọn file';
+                    }
+                }
+
+                ?>
                 <!-- <div class="alert alert-info alert-dismissible fade in shadowed" role="alert">
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                     <i class="fa fa-fw fa-info-circle"></i> Clearmin uses <a href="http://www.google.com/fonts#ChoosePlace:select/Collection:Roboto">Roboto font</a> by Google Inc. (Apache 2.0) 
