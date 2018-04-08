@@ -49,6 +49,8 @@
                                         <?php
                                         foreach ($dssp as $key => $value) {
                                             //echo $value->TenMA.'<br/>';
+                                            echo '<form action="" method="post">';
+
                                             echo '<tr>
                                             <th scope="row">'.$value->MaMA.'</th>
                                             <td>'.$value->TenMA.'</td>
@@ -56,8 +58,10 @@
                                             <td>'.$value->Dongia.'</td>
                                             <td><img src="public/images/'.$value->Anh.'" width="100%"/></td>
                                             <td>'.$value->TenDM.'</td>
-                                            <td><img src="demo/assets/img/sf/trashcan.svg"  width="100%"></td>
+                                            <td><input type="submit" value="Xóa" name="btnXoa" onClick="xoaMonAn('.$value->MaMA.')"/></td>
                                             </tr>';
+
+                                            echo '</form>';
                                         }
                                         
                                         
@@ -82,5 +86,23 @@
         <?php
             include_once('views/layout/script.php');
         ?>
+        <script>
+            function xoaMonAn(asd) {
+
+                //alert(asd);
+
+                if(confirm("Bạn có muốn xóa ?")){
+                    var xhttp = new XMLHttpRequest();
+                    // xhttp.onreadystatechange = function() {
+                    //   if (this.readyState == 4 && this.status == 200) {
+                    //     //document.getElementById("demo").innerHTML =
+                    //     //alert(this.responseText);
+                    //   }
+                    // };
+                    xhttp.open("GET", "index.php?kihieu=xoa-mon-an&ma="+asd, true);
+                    xhttp.send();
+                }
+            }
+        </script>
     </body>
 </html>

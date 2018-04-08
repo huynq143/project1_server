@@ -29,15 +29,15 @@
                                         <tbody>
                                             <tr>                                            
                                                 <td>Tên</td>
-                                                <td><input type="text" name="" style="width: 100%;height: 100%;" /></td>
+                                                <td><input type="text" name="ten" style="width: 100%;height: 100%;" /></td>
                                             </tr>
                                             <tr>                                            
                                                 <td>Giới thiệu</td>
-                                                <td><textarea style="width: 100%;"></textarea></td>
+                                                <td><textarea style="width: 100%;" name="gioithieu"></textarea></td>
                                             </tr>
                                             <tr>                                            
                                                 <td>Giá</td>
-                                                <td><input type="number" step="1" name="" style="width: 100%;height: 100%;" /></td>
+                                                <td><input type="number" step="1" name="gia" style="width: 100%;height: 100%;" /></td>
                                             </tr>
                                             <tr>                                            
                                                 <td>Hình</td>
@@ -46,16 +46,16 @@
                                             <tr>                                            
                                                 <td>Loại</td>
                                                 <td>
-                                                    <select>
+                                                    <select name="loai">
                                                         <optgroup label="Món ăn">
-                                                            <option>Món chính</option>
-                                                            <option>Món ăn vặt</option>
-                                                            <option>Cơm văn phòng</option>
+                                                            <option value="monan-1">Món chính</option>
+                                                            <option value="monan-2">Món ăn vặt</option>
+                                                            <option value="monan-3">Cơm văn phòng</option>
                                                         </optgroup>
                                                         <optgroup label="Thức uống">
-                                                            <option>Trà sữa</option>
-                                                            <option>Cà phê</option>
-                                                            <option>Các loại khác</option>
+                                                            <option value="thucuong-1">Trà sữa</option>
+                                                            <option value="thucuong-2">Cà phê</option>
+                                                            <option value="thucuong-3">Các loại khác</option>
                                                         </optgroup>
                                                     </select>
                                                 </td>
@@ -79,8 +79,37 @@
                         if($_FILES['hinhSP']['error'] > 0){
                             echo 'File upload lỗi';
                         }else{
-                            move_uploaded_file($_FILES['hinhSP']['tmp_name'], './public/images/'.$_FILES['hinhSP']['name']);
-                            echo 'ok';
+                            //--------
+                            $ten = trim($_POST['ten']);
+                            $gioithieu = trim($_POST['gioithieu']);
+                            $gia = trim($_POST['gia']);
+                            $bang = explode("-", $_POST['loai'])[0];
+                            $madm = explode("-", $_POST['loai'])[1];
+
+                            $now = new DateTime();
+                            //echo $now->getTimestamp();
+
+                            $extension = pathinfo($_FILES['hinhSP']['name'], PATHINFO_EXTENSION);
+                            // echo '<pre>';
+                            // var_dump($_FILES);
+                            // echo $extension;
+                            // echo '</pre>';
+
+                            //----------
+
+                            // echo $ten;
+                            // echo $gioithieu;
+                            // echo $gia;
+                            // echo $bang;
+                            // echo $madm;
+                            $C_web = new C_web();
+                            if($bang === 'monan')
+                                $C_web->themMonAn($ten,$gioithieu,$gia,$now->getTimestamp().'-'.$_FILES['hinhSP']['name'],$madm);
+                            else
+                                $C_web->themThucUong($ten,$gioithieu,$gia,$now->getTimestamp().'-'.$_FILES['hinhSP']['name'],$madm);
+                            
+                            move_uploaded_file($_FILES['hinhSP']['tmp_name'], './public/images/'.$now->getTimestamp().'-'.$_FILES['hinhSP']['name']);
+                            echo 'Đã thêm';
                         }
                     }else{
                         echo 'chưa chọn file';

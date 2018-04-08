@@ -37,13 +37,36 @@
 	    			if(count($thongTinUser) > 0){
 	    				//echo 'ok';
 	    				$_SESSION['user'] = $thongTinUser[0];
-	    				var_dump($_SESSION['user']);
-	    				header('Location: http://www.google.com.vn/');
+	    				//var_dump($_SESSION['user']);
+	    				header('Location: http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']);
+	    				//var_dump($_SERVER);
+	    				// echo '<pre>';
+	    				// // print_r($_SERVER);
+	    				// echo $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+	    				// echo '</pre>';
 	    			}else{
 	    				echo 'Sai username hoặc password';
 	    			}
 	    		}
 	    	}    	
+	    }
+
+	    public function themMonAn($ten, $gioithieu, $gia, $anh, $dm){
+	    	//echo 'thêm nè';
+	    	$M_web = new M_web();
+	    	$M_web->themMonAn($ten, $gioithieu, $gia, $anh, $dm);
+	    }
+
+	    public function themThucUong($ten, $gioithieu, $gia, $anh, $dm){
+	    	//echo 'thêm nè';
+	    	$M_web = new M_web();
+	    	$M_web->themThucUong($ten, $gioithieu, $gia, $anh, $dm);
+	    }
+
+	    public function xoaMonAn(){
+	    	$M_web = new M_web();
+	    	if(isset($_GET['ma']))
+	    		$M_web->xoaMonAn($_GET['ma']);
 	    }
 
 		//-----------------------------------BẢNG MÓN ĂN---------------------------------

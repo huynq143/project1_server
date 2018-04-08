@@ -15,8 +15,8 @@
                             <li class="cm-submenu">
                                 <a class="sf-window-layout">Quản lý sản phẩm <span class="caret"></span></a>
                                 <ul>
-                                    <li><a href="web.php?kihieu=danh-sach-san-pham">Danh sách sản phẩm</a></li>
-                                    <li><a href="web.php?kihieu=them-san-pham">Thêm sản phẩm</a></li>
+                                    <li><a href="index.php?kihieu=danh-sach-san-pham">Danh sách sản phẩm</a></li>
+                                    <li><a href="index.php?kihieu=them-san-pham">Thêm sản phẩm</a></li>
                                 </ul>
                             </li>
                             <li class="cm-submenu">

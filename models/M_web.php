@@ -13,6 +13,26 @@
 			return $this->loadAllRow(array($username, $password));
 		}
 
+		public function themMonAn($ten, $gioithieu, $gia, $anh, $dm){
+			//echo 'm món ăn';
+			$this->setQuery("insert into monan (TenMA, GioiThieu, Dongia, Anh, MaDM) VALUES (?,?,?,?,?)");
+			$this->execute(array($ten, $gioithieu, $gia, $anh, $dm));
+		}
+
+		public function themThucUong($ten, $gioithieu, $gia, $anh, $dm){
+			//echo 'm món ăn';
+			$this->setQuery("insert into douong (TenDU, GioiThieu, Dongia, Anh, MaDM) VALUES (?,?,?,?,?)");
+			$this->execute(array($ten, $gioithieu, $gia, $anh, $dm));
+		}
+
+		public function xoaMonAn($ma){
+			$this->setQuery("delete from monan where MaMA = ?");
+			$this->execute(array($ma));
+		}
+
+
+		//-----------------------
+
 		public function xemMonAnTheoMa($maMon){
 			$this->setQuery('select * from monan where `MaMA` = ?');
 			return $this->loadRow(array($maMon));
