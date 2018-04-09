@@ -30,6 +30,17 @@
 					$C_web = new C_web();
 					$C_web->xoaMonAn();
 					break;
+				case 'cap-nhat-mon-an':
+					//echo "món ăn nè hihi";
+					$C_web = new C_web();
+					$C_web->capNhatMonAn();
+					break;
+
+				case 'dang-xuat':
+					//echo "món ăn nè hihi";
+					$C_web = new C_web();
+					$C_web->dangXuat();
+					break;
 				//----------------------MÓN ĂN-------------------------
 				case 'danh-sach-mon-an':
 					//echo "món ăn nè hihi";
@@ -47,11 +58,11 @@
 					$C_app = new C_app();
 					$C_app->danhSachMonAnCoMaLonHon();
 					break;
-				case 'chi-tiet-mon-an':
-					//echo "món ăn nè hihi";
-					$C_app = new C_app();
-					$C_app->chiTietMonAn();
-					break;
+				// case 'chi-tiet-mon-an':
+				// 	//echo "món ăn nè hihi";
+				// 	$C_app = new C_app();
+				// 	$C_app->chiTietMonAn();
+				// 	break;
 				case 'danh-sach-mon-an-theo-ma-loai':
 					//echo "món ăn nè hihi";
 					$C_app = new C_app();

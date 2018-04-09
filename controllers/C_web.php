@@ -69,6 +69,20 @@
 	    		$M_web->xoaMonAn($_GET['ma']);
 	    }
 
+	    public function capNhatMonAn(){
+	    	$M_web = new M_web();
+	    	if(isset($_GET['ma']))
+	    		
+
+	    		$dssp = $this->chiTietMonAn();
+	    		require_once('views/V_admin_cap_nhat_san_pham.php');
+	    }
+
+	    public function dangXuat(){
+	    	unset($_SESSION['user']);
+	    	// header('Location: http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']);
+	    }
+
 		//-----------------------------------BẢNG MÓN ĂN---------------------------------
 	    public function danhSachMonAn()
 	    {
@@ -118,9 +132,11 @@
 	    		$M_app = new M_app();
 	    		$dsma = $M_app->xemMonAnTheoMa($_GET['ma']);
 
-	    		echo json_encode($dsma);
+	    		//echo json_encode($dsma);
 			
 				//echo '<pre>'; print_r($dsma); echo '</pre>';
+
+				return $dsma;
 	    	}else{
 	    		echo 'Sai';
 	    	}

@@ -10,8 +10,8 @@
                     <div id="cm-menu-scroller">
                         <ul class="cm-menu-items">
                             <li class="active"><a href="index.html" class="sf-house">Home</a></li>
-                            <li><a href="dashboard-sales.html" class="sf-dashboard">Dashboard</a></li>
-                            <li><a href="components-text.html" class="sf-brick">Components</a></li>
+                            <!-- <li><a href="dashboard-sales.html" class="sf-dashboard">Dashboard</a></li>
+                            <li><a href="components-text.html" class="sf-brick">Components</a></li> -->
                             <li class="cm-submenu">
                                 <a class="sf-window-layout">Quản lý sản phẩm <span class="caret"></span></a>
                                 <ul>
@@ -19,7 +19,7 @@
                                     <li><a href="index.php?kihieu=them-san-pham">Thêm sản phẩm</a></li>
                                 </ul>
                             </li>
-                            <li class="cm-submenu">
+                            <!-- <li class="cm-submenu">
                                 <a class="sf-cat">Icons <span class="caret"></span></a>
                                 <ul>
                                     <li><a href="ico-sf.html">Small-n-flat</a></li>
@@ -28,7 +28,7 @@
                                 </ul>
                             </li>
                             <li><a href="notepad.html" class="sf-notepad">Text Editor</a></li>
-                            <li><a href="login.html" class="sf-lock-open">Login page</a></li>
+                            <li><a href="login.html" class="sf-lock-open">Login page</a></li> -->
                         </ul>
                     </div>
                 </div>
